@@ -1,16 +1,16 @@
 package zleetcode
 
-func removeDuplicates (a []int) []int {
-	if len(a) == 0{
-		return nil
+func removeDuplicates(a []int) []int {
+	if len(a) == 0 {
+		return []int{}
 	}
 	unique := 0
 	for i := 1; i < len(a); i++ {
 		if a[unique] != a[i] {
 			unique++
-			a[unique] = a[i] 
+			a[unique] = a[i]
 		}
 	}
 	unique++
-	return a[0: unique]
+	return a[0:unique]
 }
